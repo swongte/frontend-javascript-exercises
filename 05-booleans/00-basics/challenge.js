@@ -40,20 +40,24 @@ module.exports.inBetween = function(lower, middle, upper) {
 
 };*/
 
-module.exports.outsideRanges = function(number) {
-  if((number < 10) || (number > 20)){
-    return true;
-  }
-  else if((number < 43) || (number > 75)){
-    return true;
-  }
-  else if((number < 2) || (number > 5)){
-    return true;
-  }
-  else{
+/*module.exports.outsideRanges = function(number) {
+  if((number >= 10) && (number <= 20)){
     return false;
   }
+  else if((number > 42) && (number <= 75)){
+    return false;
+  }
+  else if((number > 1) && (number < 6)){
+    return false;
+  }
+  else{
+    return true;
+  }
 
+};*/
+
+module.exports.outsideRanges = function(number) {
+  return ((number < 10 || number > 20) && (number <= 42 || number > 75) && (number <= 1 || number >= 6)); 
 };
 
 module.exports.nameAndPrice = function(name, price) {
