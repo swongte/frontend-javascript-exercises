@@ -10,11 +10,13 @@ module.exports.reversePlusOne = function(array){
 
 module.exports.plusesEverywhere = function(array){
   if(array.length < 2){
-    return array.replace(array[0].replace("+"));
+    return array.toString().replace(/./g, "+");
   }
   else{
     return array.toString().replace(/,/g,"+");
   }
 };
 
-module.exports.arrayQuantityPlusOne = undefined;
+module.exports.arrayQuantityPlusOne = function(array){
+  return array.length + 1;
+};
